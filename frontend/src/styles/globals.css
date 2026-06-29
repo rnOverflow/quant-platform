@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-navy-950 text-slate-100;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A1628;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1E3A6E;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B82F6;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-xl border border-white/5 bg-white/[0.03] backdrop-blur-sm;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+  }
+
+  .glass-card-strong {
+    @apply rounded-xl border border-white/10 bg-white/[0.06] backdrop-blur-md;
+  }
+
+  .metric-value {
+    @apply font-mono font-semibold text-2xl tracking-tight;
+  }
+
+  .positive {
+    @apply text-emerald-400;
+  }
+
+  .negative {
+    @apply text-red-400;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all duration-150 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/[0.06] hover:bg-white/[0.10] text-slate-300 font-medium text-sm border border-white/10 transition-all duration-150 active:scale-95;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-navy-900 font-semibold text-sm transition-all duration-150 active:scale-95; background: linear-gradient(to right, #D4AF37, #F5C842);
+  }
+
+  .input-dark {
+    @apply w-full px-3 py-2 rounded-lg bg-white/[0.05] border border-white/10 text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30 transition-all;
+  }
+
+  .section-title {
+    @apply text-sm font-semibold text-slate-400 uppercase tracking-widest;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-100 hover:bg-white/[0.06] transition-all duration-150;
+  }
+
+  .nav-link.active {
+    @apply text-white bg-blue-600/20 border border-blue-500/30;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded bg-white/[0.06];
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .ticker-positive {
+    @apply text-emerald-400 font-mono font-medium;
+  }
+
+  .ticker-negative {
+    @apply text-red-400 font-mono font-medium;
+  }
+
+  .stat-card {
+    @apply glass-card p-4 flex flex-col gap-1;
+  }
+
+  .chart-container {
+    @apply glass-card p-4;
+  }
+}
+
+@layer utilities {
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold-400 to-gold-500 bg-clip-text text-transparent;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  }
+
+  .border-gradient {
+    background: linear-gradient(#0A1628, #0A1628) padding-box,
+      linear-gradient(135deg, rgba(59,130,246,0.5), rgba(212,175,55,0.3)) border-box;
+    border: 1px solid transparent;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #0F2040 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 8px !important;
+  color: #e2e8f0 !important;
+}
+
+.recharts-legend-item-text {
+  color: #94a3b8 !important;
+  font-size: 12px !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: #64748b !important;
+  font-size: 11px !important;
+}
