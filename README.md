@@ -8,7 +8,7 @@
 
 ---
 
-## 🏦 Overview
+##  Overview
 
 QuantEdge is a production-quality, Bloomberg Terminal-inspired investment analytics platform featuring:
 
@@ -19,7 +19,7 @@ QuantEdge is a production-quality, Bloomberg Terminal-inspired investment analyt
 
 ---
 
-## ✨ Feature Set
+##  Feature Set
 
 | Module | Capabilities |
 |--------|-------------|
@@ -34,7 +34,7 @@ QuantEdge is a production-quality, Bloomberg Terminal-inspired investment analyt
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 **Frontend:** React 18 · Vite · TypeScript · TailwindCSS · Framer Motion · Recharts · Zustand
 
@@ -44,7 +44,7 @@ QuantEdge is a production-quality, Bloomberg Terminal-inspired investment analyt
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Option 1: Docker (Recommended)
 
@@ -76,7 +76,7 @@ Open http://localhost:5173
 
 ---
 
-## 📊 Financial Math
+##  Financial Math
 
 | Metric | Formula |
 |--------|---------|
@@ -93,7 +93,7 @@ Open http://localhost:5173
 
 ---
 
-## 🗂 Project Structure
+##  Project Structure
 
 ```
 quant-platform/
@@ -118,7 +118,7 @@ quant-platform/
 
 ---
 
-## 🤖 AI Reports
+##  AI Reports
 
 Provide a [Groq API key](https://console.groq.com) in the Reports page to enable institutional AI commentary powered by LLaMA 3. Without a key, template-based commentary is used automatically.
 
